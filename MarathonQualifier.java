@@ -51,20 +51,20 @@ public class MarathonQualifier {
 
         // Kiểm tra ngày xét duyệt có nằm trong khoảng thời gian hợp lệ
         if (reviewDate.isBefore(startDate) || reviewDate.isAfter(endDate)) {
-            return "không đạt";
+            return "Khong dat";
         }
 
         // Kiểm tra chuẩn đầu vào (Cách 1)
         if (runTime <= 7690) {
-            return "đạt";
+            return "dat";
         }
 
         // Kiểm tra Bảng xếp hạng thế giới (Cách 2)
         if (ranking <= 65) {
-            return "đạt";
+            return "dat";
         }
 
         // Không đạt nếu không thỏa mãn cả hai cách
-        return "không đạt";
+        return "Khong dat";
     }
 }
